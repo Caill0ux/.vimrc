@@ -1,0 +1,17 @@
+Bindings:
+- <leader> : " "
+- Explorer : <leader>qi
+- File Finder :
+    - Find File : <leader>ff
+    - Find Word : <leader>fw
+- Harpoon: 
+	- Menu : <C-E>
+	- Add file : <leader>a
+	- First : <C-t>
+	- Second : <C-s>
+	- Third : <C-h>
+	- Forth : <C-n>
+- UndoTree:
+	- Toggle : <leader>u
+- Git:
+	- Toggle : <leader>gs
