@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- Telescope (research in files)
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.5',                    
+		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { {'nvim-lua/plenary.nvim'} }
 
 	}
@@ -49,5 +49,35 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'}
 		}
 	}
+    ---------------------------------------------------------------------------------------------------------
+    --------------------------------------------- COMPLETION RELATED ----------------------------------------
+    use "hrsh7th/cmp-buffer"                  -- buffer completions
+    use "hrsh7th/cmp-path"                    -- path completions
+    use "hrsh7th/cmp-cmdline"                 -- cmdline completions
+    use "saadparwaiz1/cmp_luasnip"            -- snippet completions
+    use "hrsh7th/cmp-nvim-lua"                -- lua vim completions
+    use "hrsh7th/cmp-nvim-lsp-signature-help" -- function parameters completions
+    ---------------------------------------------------------------------------------------------------------
+    --------------------------------------------- SNIPPETS RELATED ------------------------------------------
+    use "L3MON4D3/LuaSnip"             -- snippet engine
+    use "rafamadriz/friendly-snippets" -- a bunch of ready-to-use snippets
+    use "jose-elias-alvarez/null-ls.nvim"   -- for linting purposes
+    ---------------------------------------------------------------------------------------------------------
+    ------------------------------------------------ LSP RELATED --------------------------------------------
+    use "folke/trouble.nvim"                -- for LSP\Linter warnings\errors
+    use "Hoffs/omnisharp-extended-lsp.nvim" -- for proper go-to-definition support for omnisharp
+    ---------------------------------------------------------------------------------------------------------
+    ----------------------------------------------- UI RELATED ----------------------------------------------
+    use 'nvim-tree/nvim-tree.lua'     -- fancy file explorer
+    use 'nvim-lualine/lualine.nvim'   -- fancy status bar
+    use {
+        'akinsho/bufferline.nvim', -- tabline plugin
+        tag = "v3.*",
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
+    use {
+        "akinsho/toggleterm.nvim", -- terminal integration within nvim
+        tag = '*',
+        config = function() require("toggleterm").setup() end
+    }
 end)
-

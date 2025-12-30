@@ -28,3 +28,4 @@ vim.opt.updatetime = 100
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>qi", vim.cmd.Ex)
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
