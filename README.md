@@ -3,7 +3,7 @@ This is a neovim configuration meant to be used across different debian OS's.
 
 ## Requirements:
 + neovim >= 0.10.0
-+ packer
++ Lazy vim
 + tar
 + curl
 + cargo
